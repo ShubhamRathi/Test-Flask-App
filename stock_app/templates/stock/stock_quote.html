@@ -1,0 +1,10 @@
+{% extends "base_layout.html" %}
+{% block title %} {{ticker}} {% endblock %}
+
+{% block content %}
+<main class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">{{ticker}} price is {{stock_price}}</h1>
+    </div>
+</main>
+{% endblock %}

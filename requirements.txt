@@ -1,0 +1,6 @@
+flask
+requests
+pytest
+pytest-flask
+gunicorn
+pytest-cov

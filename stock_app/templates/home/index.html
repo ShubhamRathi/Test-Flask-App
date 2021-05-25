@@ -1,0 +1,39 @@
+{% extends "base_layout.html" %}
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <h1 class="mt-5">Welcome to Stock App</h1>
+        <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and
+            CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code
+                class="small">main &gt; .container</code>.</p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Starter projects</h2>
+                <p>Ready to beyond the starter template? Check out these open source projects that you can quickly
+                    duplicate
+                    to a new GitHub repository.</p>
+                <ul class="icon-list">
+                    <li><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">Bootstrap
+                            npm
+                            starter</a></li>
+                    <li class="text-muted">Bootstrap Parcel starter (coming soon!)</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Stocks</h2>
+                <p>Below is a list of popular stocks</p>
+                <ul class="icon-list">
+                    <li><a href="{{ url_for('stock.view_stock', ticker='AAPL')}}">Apple</a></li>
+                    <li><a href="{{ url_for('stock.view_stock', ticker='GOOGL')}}">Google</a></li>
+                    <li><a href="{{ url_for('stock.view_stock', ticker='GM')}}">General Motor</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
